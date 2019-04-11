@@ -1,16 +1,42 @@
 {
-  "name": "calendar",
-  "version": "0.1.0",
-  "private": true,
+  "name": "warsawjs-workshop-31-calendar-client",
+  "version": "0.2.2",
+  "proxy": "http://localhost:5000",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "@material-ui/core": "3.9.2",
+    "@material-ui/icons": "3.0.2",
+    "classnames": "2.2.6",
+    "moment-timezone": "0.5.23",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
+    "react-redux": "6.0.1",
+    "redux": "4.0.1",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "2.2.7",
+    "@types/jest": "24.0.11",
+    "@types/moment-timezone": "0.5.12",
+    "@types/node": "11.12.0",
+    "@types/react": "16.8.10",
+    "@types/react-dom": "16.8.3",
+    "@types/react-redux": "7.0.6",
+    "@types/redux-logger": "3.0.7",
+    "gh-pages": "2.0.1",
+    "react-scripts": "2.1.8",
+    "tslint": "5.15.0",
+    "typescript": "3.4.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:package": "yarn run build && tar -zcvf client-package.tar.gz build/",
     "test": "react-scripts test",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "lint:fix": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
