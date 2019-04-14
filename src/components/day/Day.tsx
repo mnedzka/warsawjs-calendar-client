@@ -90,7 +90,7 @@ class Day extends Component<IDayProps> {
           <ListItem key={event.id}>
             <ListItemAvatar>
               <Avatar>
-                <Typography variant="button">
+                <Typography variant='button'>
                   {moment(event.time).format('H:mm')}
                 </Typography>
               </Avatar>
@@ -102,15 +102,15 @@ class Day extends Component<IDayProps> {
               primary={event.title}
               secondary={
                 <Fragment>
-                  <Typography component="div" color="textPrimary">
+                  <Typography component='div' color='textPrimary'>
                     {event.description}
                   </Typography>
                   <div className={classes.actions}>
                     <div className={classes.flexGrow} />
                     <div className={classes.deleteButtonWrapper}>
                       <Fab
-                        aria-label="Delete"
-                        color="primary"
+                        aria-label='Delete'
+                        color='primary'
                         onClick={async () => {
                           await dispatchDeleteEvent(event.id);
                           dispatchRefetchCalendar();

@@ -99,7 +99,7 @@ class Calendar extends Component<ICalendarProps> {
       <div className={classes.root}>
         {DAYS.map(day => (
           <Card key={day}>
-            <Typography variant="h6" gutterBottom>
+            <Typography variant='h6' gutterBottom>
               {day}
             </Typography>
           </Card>
@@ -119,13 +119,13 @@ class Calendar extends Component<ICalendarProps> {
             )}
             onClick={() => this.handleSelectedDayChange(date)}
           >
-            <Typography variant="h6" gutterBottom>
+            <Typography variant='h6' gutterBottom>
               {moment(date).format('DD')}
             </Typography>
             <div>
               {Array.from({ length: 3 }).map((_, index) => (
                 <Typography
-                  variant="caption"
+                  variant='caption'
                   key={events && events[index] ? events[index].id : index}
                   className={classes.eventTitle}
                   gutterBottom

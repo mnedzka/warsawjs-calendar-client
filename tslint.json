@@ -3,7 +3,10 @@
   "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
-    "quotemark": [true, "single", "jsx-single"]
+    "quotemark": [true, "single", "jsx-single"],
+    "object-literal-key-quotes": [true, "as-needed"],
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "semicolon": [true, "always", "ignore-bound-class-methods"]
   },
   "rulesDirectory": []
 }
